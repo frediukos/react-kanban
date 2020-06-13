@@ -3,19 +3,20 @@ import React, {useState} from 'react';
 function KanbanListCard(props) {
 
 
+
   return (
-    <div>
-      <div className="card border-danger mb-3">
-        <div className="card-header">{props.card.name}</div>
-        <div className="card-body text-danger">
-        <h5 className="card-title">{props.card.name}</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-        </div>
-        </div>
+
+    <div className="card-border mb-3" className="shadow  mb-3 bg-white rounded">
+      <div className="card-header">{props.task.name}</div>
+      <div className="card-body">
+          <span className="card-title">priority:
+            {props.priorities.find(el => el.id === props.task.priority).priority}
 
 
 
+          </span>
+        <p className="card-text"></p>
+      </div>
     </div>
 
 
